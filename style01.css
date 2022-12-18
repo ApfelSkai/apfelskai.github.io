@@ -133,7 +133,7 @@ hr {
 
 }
 .greeting1 h1 {
-	font-size: max(min(var(--h), var(--w)), 2em);
+	font-size: max(min(var(--h), var(--w)), 3em);
 	color: white;
 
 }
@@ -169,7 +169,7 @@ p {
 }
 
 .redirect {
-	font-size: max(min(var(--h), calc(var(--w)*.75)), 3em);
+	font-size: max(min(calc(var(--h)), var(--w)), max(3.5em, min(9vw, 8em)));
 	text-align: center;
 }
 
