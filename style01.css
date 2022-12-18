@@ -216,8 +216,9 @@ p {
 	max-width: 60%;
 
 }
+}
 
-@media only screen and (max-width:1600px) {
+@media only screen and (orientation:portrait), only screen and (max-width: 1200) {
 
 #stacked {
 	width: 100%;
@@ -228,8 +229,9 @@ p {
 	font-size: calc(var(--w)*.9);
 }
 #stacked p {
-	font-size: min(calc(var(--w)*.5), 2em);
+	font-size: min(calc(var(--w)*.5), 4em);
 }
 .refs {
-	width: 95%;
+	width: 95vw;
+}
 }
