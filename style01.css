@@ -8,7 +8,7 @@ html {
 
 body {
 	margin: 0;
-	padding:0;
+	padding-bottom:100px;
 	background-image: linear-gradient(to top, #78d43d 0%, #0099cc 100%);
 	background-size: cover;
 	background-attachment: fixed;
@@ -56,8 +56,8 @@ hr {
 }
 
 #stacked {
-	display: inline-block;
-	min-width: min(700px, 80vw);
+	display:inline-block;
+	min-width: min(500px, 80vw);
 	width: min(800px, 25vw);
 	padding: 0 2em;
 	max-width: 45%;
@@ -90,41 +90,56 @@ hr {
 }
 
 #centered {
-	top:0px;
-	bottom:15px;
 	width: 100%;
-	display: inline-block;
-	margin:0;
+	height: 100%;
+	display: flex;
 	position: absolute;
-	justify-content: center;
+	justify-content: space-between;
+	flex-direction: column;
 	text-align: center;
-	vertical-align: middle;
+
+
+	--h: 6vh;
+	--w: 6vw;
 }
 
-.greeting {
-	display: inherit;
-	width:100%;
-	height:min(max(15vh,100px),auto);
+#linear {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: absolute;
+	justify-content: flex-start;
+	flex-direction: column;
+	text-align: center;
+
+	--h: 6vh;
+	--w: 6vw;
+}
+
+.greeting2 {
+	text-align: center;
+	height:auto;
 
 }
-.greeting h1 {
-	font-size: min(max(3vw, 3vh), max(3em,7vh));
+.greeting2 h1 {
+	font-size: max(min(calc(var(--h)*.6), calc(var(--w)*.6)), 2em);
 	color: white;
 
 }
-.content {
-	display: inline-block;
-	bottom:0;
-	width:80vw;
-	max-width: 1500px;
-	height:70%;
-	margin-left: auto;
-	margin-right: auto;
-	vertical-align: middle;
+
+.greeting1 {
+	text-align: center;
+	height:auto;
+
 }
-.content a {
-	font-size: min(max(4vw, 4vh), max(5em));
-	padding:0;
+.greeting1 h1 {
+	font-size: max(min(var(--h), var(--w)), 2em);
+	color: white;
+
+}
+
+.content {
+	width:auto;
 }
 
 p {
@@ -134,31 +149,28 @@ p {
 	font-size: large;
 }
 
-footer {
-	width: 100%;
-	position: fixed;
-	bottom: 0px;
+.flexfooter {
 	text-align: center;
 	padding: 15px 0px 5px 0px;
-	margin: 0;
-	background: linear-gradient(0deg, rgba(0,25,35,1) 0%, rgba(0,45,74,0) 100%);
+	background: linear-gradient(0deg, rgba(50,100,100,.8) 0%, rgba(200,200,200,0) 100%);
 	color:white;
 	font-family: Roboto;
 	font-weight: 600;
+	bottom: 0px;
+	width:100%;
+	position: sticky;
 }
 
+
 #links {
-	display:block;
+
 	font-family: Roboto;
 	font-weight: 300;
 }
 
 .redirect {
-	height:100%;
-	position: relative;
-    	top: 35%;
-    	transform: translateY(-35%);
-
+	font-size: max(min(var(--h), calc(var(--w)*.75)), 3em);
+	text-align: center;
 }
 
 .refs a {
@@ -177,8 +189,11 @@ footer {
 	
 
 .pics {
-	display: inline-block;
-	height:inherit;
+	display:flexbox;
+	align-self: stretch;
+	flex-direction: column;
+	flex-grow:1;
+
 }
 
 .pics img {
