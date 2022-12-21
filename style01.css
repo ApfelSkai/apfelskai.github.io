@@ -13,6 +13,14 @@ body {
 	background-attachment: fixed;
 }
 
+p {
+	margin:.5em 0;
+	font-family: Roboto;
+	color: white;
+	font-weight: 400;
+	font-size: large;
+}
+
 a {
 	text-decoration: none;
 	color: white;
@@ -36,8 +44,8 @@ h2 {
 	color: #DDDFFF;
 	font-family: Roboto;
 	font-weight: 600;
-	font-size: min(max(6vw, 25pt), 40pt);
-	margin: .25em;
+	font-size: min(max(6vw, 25pt), 5em);
+	margin:.25rem;
 }
 
 h3 {
@@ -119,7 +127,7 @@ hr {
 
 }
 .greeting2 h1 {
-	font-size: max(min(calc(var(--h)*.6), calc(var(--w)*.6)), 2em);
+	font-size: max(min(var(--h), var(--w), 3em));
 	color: white;
 
 }
@@ -139,12 +147,6 @@ hr {
 	width:auto;
 }
 
-p {
-	font-family: Roboto;
-	color: white;
-	font-weight: 300;
-	font-size: large;
-}
 
 .flexfooter {
 	text-align: center;
@@ -172,20 +174,22 @@ p {
 }
 
 .refs {
-	width: 45vw;
+	width: auto;
+	margin: 0 calc(var(--w)/3);
+	max-width: 1500px;
 }
 
 .refs a {
-	font-size: calc(var(--w)/2.7);
+	font-size: min(calc(var(--w)/2.7), 2rem);
 }
 .refs p {
-	font-size: calc(var(--w)/4.1);
+	font-size: min(calc(var(--w)*.3), 1.8rem);
 }
 .refs h3 {
 	color: #BBFFCC;
 	font-family: Roboto;
 	font-weight: 450;
-	font-size: min(max(1.3vw, 18pt), max(40pt, 1.2vh));
+	font-size: min(calc(var(--w)*.7), 3em);
 	margin: 8px;
 }
 	
@@ -216,7 +220,7 @@ p {
 }
 }
 
-@media only screen and (orientation:portrait), only screen and (max-width: 1200) {
+@media (max-width: 800px), only screen and (min-resolution: 150dpi) and (orientation:portrait){
 
 #stacked {
 	width: 100%;
@@ -233,5 +237,13 @@ p {
 	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
+}
+.refs h3 {
+	font-size: calc(var(--w)*1.5);
+}
+.greeting1 h1 {
+	font-size: max(min(var(--h), var(--w)), 2em);
+	color: white;
+
 }
 }
