@@ -221,7 +221,22 @@ hr {
 }
 }
 
-@media (max-width: 800px), only screen and (min-resolution: 150dpi) and (orientation:portrait){
+@media (max-width:800px) and (max-resolution:150dpi) {
+#stacked {
+	flex-direction:column;
+}
+#stacked a {
+	font-size: 1.5em;
+}
+#stacked p {
+	font-size: 1.3em;
+}
+#stacked h3 {
+	font-size: 2em;
+}
+}
+
+@media only screen and (min-resolution: 110dpi) and (orientation:portrait){
 
 #stacked {
 	width: 100%;
@@ -252,5 +267,6 @@ hr {
 .flexfooter {
 	position:relative;
 	bottom:0px;
+	align-self:stretch;
 }
 }
