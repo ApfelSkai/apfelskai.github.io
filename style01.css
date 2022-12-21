@@ -3,7 +3,6 @@
 html {
 	
 	height: 100%;
-	overflow: scroll;
 }
 
 body {
@@ -59,7 +58,6 @@ hr {
 	display:flex;
 	flex-direction: row;
 	justify-content: center;
-	padding: 0 2em;
 	text-align: left;
 	vertical-align: top;
 
@@ -229,9 +227,11 @@ p {
 	font-size: calc(var(--w)*.9);
 }
 #stacked p {
-	font-size: min(calc(var(--w)*.5), 4em);
+	font-size: min(calc(var(--w)*.775), 4em);
 }
 .refs {
-	width: 95vw;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 }
 }
