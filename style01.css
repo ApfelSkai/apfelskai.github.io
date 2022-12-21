@@ -2,13 +2,13 @@
 
 html {
 	
-	height: 100vh;
-	min-height: 100vh;
+	height: 100%;
+	min-height: 100%;
 }
 
 body {
 	margin: 0;
-	min-height:100vh;
+	min-height:100%;
 	background-image: linear-gradient(to top, #78d43d 0%, #0099cc 100%);
 	background-size: cover;
 	background-attachment: fixed;
@@ -221,7 +221,7 @@ hr {
 }
 }
 
-@media (max-width:800px) and (max-resolution:150dpi) {
+@media (max-width:800px) and (max-resolution:120dpi) {
 #stacked {
 	flex-direction:column;
 }
@@ -236,7 +236,7 @@ hr {
 }
 }
 
-@media only screen and (min-resolution: 110dpi) and (orientation:portrait){
+@media (min-resolution: 150dpi) and (orientation:portrait) {
 
 #stacked {
 	width: 100%;
@@ -263,6 +263,7 @@ hr {
 
 }
 }
+
 @media only screen and (min-resolution:150dpi) {
 .flexfooter {
 	position:relative;
