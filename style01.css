@@ -267,7 +267,7 @@ hr {
 .flexfooter {
 	display:unset;
 	position:relative;
-	bottom:0px;
+	bottom: env(safe-area-inset-bottom);
 	align-self:stretch;
 }
 }
