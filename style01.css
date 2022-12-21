@@ -248,3 +248,9 @@ hr {
 
 }
 }
+@media only screen and (min-resolution:150dpi) {
+.flexfooter {
+	position:relative;
+	bottom:0px;
+}
+}
