@@ -81,6 +81,8 @@ hr {
 	background-color: rgba(50, 70, 90, .25);
 	z-index:1;
 
+	font-size: max(min(2vw, 3vh), 1.5rem);
+
 }
 .menu-content {
 	display: none;
@@ -88,7 +90,9 @@ hr {
 	padding: inherit;
 	margin: 10px 0;
 	width:auto;
-	background-color: rgba(50, 70, 90, .25);
+	background-color: rgba(50, 70, 90, .75);
+
+	font-size: max(min(2vw, 2vh), 1.5rem);
 }
 .menu:hover .menu-content{
 	display:block;
@@ -117,7 +121,7 @@ hr {
 	flex-direction: column;
 	text-align: center;
 
-	--h: 6vh;
+	--h: 4vh;
 	--w: 6vw;
 }
 
@@ -169,7 +173,7 @@ hr {
 }
 
 .redirect {
-	font-size: max(min(calc(var(--w)*2),var(--h)), 3em);
+	font-size: max(min(calc(var(--w)*2),calc(var(--h)*.8)), 3em);
 	text-align: center;
 }
 
